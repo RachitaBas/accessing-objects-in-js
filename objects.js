@@ -1,11 +1,13 @@
-var userOne= {
-    email:'rachita123@gmail.com',
-    name:'rachita',
-    login(){
+
+function User(email,name){
+    this.email=email;
+    this.online=false;
+    this.login=function(){
         console.log(this.email,'has logged in');
 
-    },
-    logout(){
-        console.log(this.email,'has logged out');
     }
-};
+}
+var userOne = new User('rach1@gmail.com','Rach');
+var userTwo = new User('samir2@gmail.com','samir');
+console.log(userOne);
+userTwo.login();
